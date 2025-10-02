@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: "Courier New", "monospace";
+    /* change this */
+    color: green;
+    background-color: #ADD8E6;
+}
+</style>
+</head>
+<body onload="loadFromLocalStorage()">
+  <h1>localStorage Shopping List app</h1>
+  <ul id="listDisplayBox">
+    List items go here:
+  </ul>
+  <button onclick="addListItem(prompt())">
+    +ADD
+  </button>
+  <script>
+    let myArray = [];
+
+    function displaySingleListItem(someText){
+      var node = document.createElement("li");
+      node.innerHTML = someText;
+      var button = document.createElement("button");
+      button.innerHTML = 'X';
+      button.onclick = function(){
+        removeListItem(someText);
+      }
+      node.appendChild(button);
+      document.getElementById("listDisplayBox").appendChild(node);
+    }
+
+
+    function displayFullList(){
+      document.getElementById("listDisplayBox").innerHTML = "";
+      // create a for-loop and loop through myArray
+     
+        // call displaySingleListItem() function & pass each array item as an argument
+       
+      }
+    }
+
+    function addListItem(someText){
+      // push someText into myArray
+     
+      // save myArray in localStorage.savedList
+     
+      // call displaySingleListItem() function & pass someText as an argument
+     
+    }
+
+    function loadFromLocalStorage(){  
+      // if localStorage.savedList is undefined then return
+     
+      }
+      // if localStorage.savedList is not undefined then do these 3 lines of code...
+     
+       
+      }
+    }
+    function removeListItem(someText){
+      // use indexOf to find the index location of
+     
+    }
+  </script>
+</body>
+</html>
